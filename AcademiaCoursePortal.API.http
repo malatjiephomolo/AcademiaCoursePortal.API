@@ -1,0 +1,27 @@
+@AcademiaCoursePortal.API_HostAddress = http://localhost:5034
+
+# Get a list of all courses
+GET {{AcademiaCoursePortal.API_HostAddress}}/api/courses
+Accept: application/json
+
+# Get a specific course by ID
+GET {{AcademiaCoursePortal.API_HostAddress}}/api/courses/{id}
+Accept: application/json
+
+# Create a new course
+POST {{AcademiaCoursePortal.API_HostAddress}}/api/courses
+Content-Type: application/json
+{
+  "name": "New Course Name"
+}
+
+# Update an existing course
+PUT {{AcademiaCoursePortal.API_HostAddress}}/api/courses/{id}
+Content-Type: application/json
+{
+  "id": {id},
+  "name": "Updated Course Name"
+}
+
+# Delete a course
+DELETE {{AcademiaCoursePortal.API_HostAddress}}/api/courses/{id}
