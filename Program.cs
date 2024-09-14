@@ -44,7 +44,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigins",
         policy =>
         {
-            policy.AllowAnyOrigin() // URL of your Blazor client
+            policy.AllowAnyOrigin() 
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -103,9 +103,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthentication(); // Add authentication middleware
-app.UseAuthorization();  // Ensure this is included for any authorization policies
-app.UseCors("AllowSpecificOrigins"); // Use the more restrictive CORS policy
+app.UseAuthentication(); 
+app.UseAuthorization();  
+app.UseCors("AllowSpecificOrigins"); 
 app.MapControllers();
 
 app.Run();
